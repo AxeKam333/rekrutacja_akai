@@ -29,7 +29,13 @@ body {
   Zastanów się, czy Comic Sans jest odpowiedni.
   Jeśli nie, wybierz inną czcionkę i zmodyfikuj poniższy tekst.
   */
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: 'Trebuchet MS', 'sans-serif', cursive;
+  background-image: url('background_photo.jpg');
+  background-size: cover;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; */
 }
 
 /*
@@ -50,13 +56,13 @@ Zobacz, co się kryje pod tym id w pliku index.html.
   Spróbuj dostosować obramowanie tak, żeby lepiej się prezentowało. Oczywiście, jeśli uważasz, że obramowanie nie jest potrzebne,
   możesz zrezygnować z modyfikacji tego atrybutu. Domyślnie elementy nie posiadają obramowania, więc wystarczy usunąć poniższą linię.
   */
-  border: 4px solid black;
-
+  border: 4px solid #92cbdf;
+  border-radius: 35px;
   /*
   max-width ustawia maksymalną szerokość dla wybranego elementu. Oznacza to, że element osiągnie co najwyżej taką szerokość.
   Natomiast jeśli nie będzie to możliwe (okno będzie mniejsze), to element skurczy się wraz z tym oknem.
   */
-	max-width: 850px;
+	max-width: 500px;
 
   /*
   atrybut margin definiuje miejsce wolne poza obramowaniem elementu.
@@ -68,7 +74,7 @@ Zobacz, co się kryje pod tym id w pliku index.html.
   że wartości po lewej i prawej będą obliczone przez przeglądarkę podczas renderowania strony, tak, aby margin-left i margin-right
   otrzymały taką samą wartość, co będzie skutowało tym, że element zostanie na stronie wycentrowany.
   */
-  margin: 0 auto;
+  margin: 10vh auto;
 
   /*
   atrybut text-align definiuje horyzontalne umieszczenie (wyrównanie) tekstu.
@@ -81,7 +87,7 @@ Zobacz, co się kryje pod tym id w pliku index.html.
   CSS zawiera prefediniowane wartości takie jak white, red, black, etc, ale można również tworzyć własne
   poprzez podanie odpowiedniej wartości rgba
   */
-  background-color: white;
+  background-color: #bee0ec;
 
   /*
   zamykająca klamra oznacza, że kończymy modyfikować atrybuty danego elementu
@@ -99,14 +105,16 @@ W poniższym przypadku modyfikujemy wszystkie elementy z klasą "basic-title", k
   Zastanów się, czy kolor czerwony jest odpowiedni.
   Jeśli nie, zmodyfikuj poniższy tekst wedle własnego uznania.
   */
-  color: red;
+  color: #000000;
+  margin: 20px auto;
+  font-size: larger;
 }
 
 /*
 podobna sytuacja występuje poniżej. Wybieramy wszystkie elementy z klasą 'form-line' znajdujące się w elemencie o id 'task-frontend'.
 */
 #task-frontend .form-line {
-  border: 1px solid blue;
+  border: 0px solid #2596be;
 }
 
 
@@ -128,6 +136,9 @@ Chciałbym, byś przeanalizowała / przeanalizował poniższe style i zmodyfikow
   border: 1px solid black;
   width: 250px;
   height: 30px;
+  border-radius: 10px;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 #task-frontend span {
@@ -140,9 +151,25 @@ Chciałbym, byś przeanalizowała / przeanalizował poniższe style i zmodyfikow
 }
 
 #task-frontend input[type="submit"] {
-	color: green;
+	color: white;
+  background-color: #2596be;
 	margin-top: 10px;
 	width: 100px;
 	height: 30px;
 	text-align: center;
+  border:#000000;
+  border-radius: 10px;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.checkboxes {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.opt{
+  width: 100px;
+  display: flex;
 }

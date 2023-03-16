@@ -31,7 +31,7 @@
 	<section id="task-frontend">
 
 		<!-- element span otrzymuje klasę "basic-title". Klasa ta może być wykorzystywana w wielu różnych elementach -->
-		<span class="basic-title">Dołącz do nas!</span>
+		<span class="basic-title">Formularz rekrutacyjny</span>
 
 		<hr class="form-line"></hr>
 
@@ -40,25 +40,38 @@
 			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
 
 			<label for="first-name">Imię</label>
-		    <input type="text" id="first-name"/>
+		    <input type="text" id="first-name" placeholder="Imię"/>
 
             <label for="last-name">Nazwisko</label>
-		    <input type="text" id="last-name"/>
+		    <input type="text" id="last-name" placeholder="Nazwisko"/>
 
 			<label for="email">Email</label>
-		    <input type="email" id="email"/>
+		    <input type="email" id="email" placeholder="Email"/>
 
-			<span>Sekcja</span>
-            <input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
-            <label for="frontend-checkbox">Frontend</label>
-            <input type="checkbox" id="backend-checkbox" name="section" value="frontend">
-            <label for="backend-checkbox">Backend</label>
-            <input type="checkbox" id="mobile-checkbox" name="section" value="frontend">
-            <label for="mobile-checkbox">Mobile</label>
-            <input type="checkbox" id="graphics-checkbox" name="section" value="frontend">
-            <label for="graphics-checkbox">Grafika</label>
+			<span>Sekcje, które Cię interesują:</span>
 
-            <input type="submit" value="Prześlij">
+			<div class="checkboxes">
+				<div class="opt">
+					<input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
+					<label for="frontend-checkbox">Frontend</label>
+				</div>
+				<div class="opt">
+					<input type="checkbox" id="backend-checkbox" name="section" value="frontend">
+					<label for="backend-checkbox">Backend</label>
+				</div>
+			</div>
+			<div class="checkboxes">
+				<div class="opt">
+					<input type="checkbox" id="mobile-checkbox" name="section" value="frontend">
+					<label for="mobile-checkbox">Mobile</label>
+				</div>
+				<div class="opt">
+					<input type="checkbox" id="graphics-checkbox" name="section" value="frontend">
+					<label for="graphics-checkbox">Grafika</label>
+				</div>
+			</div>
+
+            <input type="submit" value="Wyślij">
 		</form>
 
 		<hr class="form-line"></hr>
