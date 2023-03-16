@@ -19,20 +19,40 @@ function isAlphabet(str) {
   return letters.test(str);
 }
 
-var firstName = document.getElementById("first-name").value;
+function isValidEmail(str) {
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(str);
+}
+
 const form = document.querySelector("form");
-const input = form.querySelector("input");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
 
+    const input = form.querySelector("input");
+    var firstName = document.getElementById("first-name").value;
+    var lastName = document.getElementById("last-name").value;
+    var eMail = document.getElementById("email").value;
+
+
     if (isEmpty(firstName) || firstName.length <= 2) {
-        alert("Podaj imię!");
-        return false;
-        } else if (!isAlphabet(firstName)) {
-        alert("Imię może zawierać tylko litery!");
-        return false;
-        }
+      alert("Podaj imię!");
+      return false;
+      } else if (!isAlphabet(firstName)) {
+      alert("Imię może zawierać tylko litery!");
+      return false;
+      }
+    if (isEmpty(lastName) || lastName.length <= 2) {
+      alert("Podaj nazwisko!");
+      return false;
+      } else if (!isAlphabet(lastName)) {
+      alert("Nazwisko może zawierać tylko litery!");
+      return false;
+      }
+    if (isEmpty(eMail) || eMail.length <= 3) {
+      alert("Podaj email!");
+      return false;
+      } 
     form.submit();
     
 })
